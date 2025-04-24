@@ -1,1 +1,19 @@
 /*  your css code here. If applicable */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 10px;
+  background-color: white;
+}
+
+.item1 { grid-area: 1 / 1 / 1 / 4; } /* spans all columns */
+.item2 { grid-area: 2 / 1 / 6 / 2; } /* spans rows 2 to 6 */
+.item3 { grid-area: 2 / 2 / 3 / 3; }
+.item4 { grid-area: 2 / 3 / 3 / 4; }
+.item5 { grid-area: 3 / 2 / 4 / 3; }
+.item6 { grid-area: 3 / 3 / 4 / 4; }
+.item7 { grid-area: 4 / 2 / 5 / 3; }
+.item8 { grid-area: 4 / 3 / 5 / 4; }
+.item9 { grid-area: 5 / 3 / 6 / 4; }
+.item10 { grid-area: 5 / 2 / 6 / 3; }
