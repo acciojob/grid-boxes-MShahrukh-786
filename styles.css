@@ -1,0 +1,71 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  grid-auto-rows: 100px; /* Height of each row */
+  gap: 5px; /* Space between grid items */
+}
+
+.item {
+  background-color: green;
+  color: white;
+  font-size: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item1 {
+  grid-column: 1 / 4; /* Stretches across all columns */
+  grid-row: 1; /* First row */
+}
+
+.item2 {
+  grid-column: 1; /* First column */
+  grid-row: 2 / 6; /* Stretches across rows 2 to 5 */
+}
+
+.item3 {
+  grid-column: 2; /* Second column */
+  grid-row: 2; /* Second row */
+}
+
+.item4 {
+  grid-column: 3; /* Third column */
+  grid-row: 2; /* Second row */
+}
+
+.item5 {
+  grid-column: 2; /* Second column */
+  grid-row: 3; /* Third row */
+}
+
+.item6 {
+  grid-column: 3; /* Third column */
+  grid-row: 3; /* Third row */
+}
+
+.item7 {
+  grid-column: 2; /* Second column */
+  grid-row: 4; /* Fourth row */
+}
+
+.item8 {
+  grid-column: 3; /* Third column */
+  grid-row: 4; /* Fourth row */
+}
+
+.item9 {
+  grid-column: 2; /* Second column */
+  grid-row: 5; /* Fifth row */
+}
+
+.item10 {
+  grid-column: 2 / 4; /* Stretches across second and third columns */
+  grid-row: 6; /* Sixth row */
+}
