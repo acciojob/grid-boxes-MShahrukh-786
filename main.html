@@ -2,66 +2,90 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bootstrap Grid Layout</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Grid Layout Design</title>
   <style>
-    .container {
-      width: 600px;
-      border: 5px solid rgb(4, 255, 4);
-      background-color: rgb(41, 0, 0);
+    body {
+      font-family: Arial, sans-serif;
     }
-    .row {
-      border: 5px solid rgb(255, 188, 188);
-      height: 200px;
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-auto-rows: 100px;
+      gap: 5px;
+      background-color: white;
+      padding: 5px;
     }
-    .col {
-      border: 2px dotted rgb(38, 38, 43);
+
+    .item {
+      background-color: green;
+      color: white;
+      font-size: 2em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
-    .r1c1 { background-color: teal; }
-    .r1c2 { background-color: thistle; }
-    .r2c1 { background-color: tomato; }
-    .r2c2 { background-color: turquoise; }
-    .r3c1 { background-color: violet; }
-    .r3c2 { background-color: yellowgreen; }
+
+    /* Positioning each item */
+    .item1 {
+      grid-column: 1 / span 3;
+    }
+    .item2 {
+      grid-column: 1;
+      grid-row: 2 / span 4;
+    }
+    .item3 {
+      grid-column: 2;
+      grid-row: 2;
+    }
+    .item4 {
+      grid-column: 3;
+      grid-row: 2;
+    }
+    .item5 {
+      grid-column: 2 / span 2;
+      grid-row: 3;
+    }
+    .item6 {
+      grid-column: 3;
+      grid-row: 3;
+    }
+    .item7 {
+      grid-column: 2;
+      grid-row: 4;
+    }
+    .item8 {
+      grid-column: 3;
+      grid-row: 4;
+    }
+    .item9 {
+      grid-column: 3;
+      grid-row: 4;
+    }
+    .item10 {
+      grid-column: 2 / span 2;
+      grid-row: 5;
+    }
   </style>
 </head>
 <body>
 
-<div class="container mt-3">
-  
-  <!-- Row 1 -->
-  <div class="row">
-    <div class="col-md-4 col-sm-6 col-6 d-flex align-items-center justify-content-center r1c1">
-      Row1 col1
-    </div>
-    <div class="col-md-8 col-sm-6 col-6 d-flex align-items-center justify-content-center r1c2">
-      Row1 col2
-    </div>
-  </div>
-  
-  <!-- Row 2 -->
-  <div class="row justify-content-between">
-    <div class="col-md-4 offset-md-2 col-6 d-flex align-items-center justify-content-center r2c1">
-      Row2 col1
-    </div>
-    <div class="col-md-4 col-6 d-flex align-items-center justify-content-center r2c2">
-      Row2 col2
-    </div>
-  </div>
-  
-  <!-- Row 3 -->
-  <div class="row justify-content-center">
-    <div class="col-md-4 col-sm-6 col-6 d-flex align-items-center justify-content-center r3c1">
-      Row3 col1
-    </div>
-    <div class="col-md-4 col-sm-6 col-6 d-flex align-items-center justify-content-center r3c2">
-      Row3 col2
-    </div>
+  <h1>CSS Grid Layout Design</h1>
+  <p>Create the following layout using grid layout:</p>
+
+  <div class="grid-container">
+    <div class="item item1">1</div>
+    <div class="item item2">2</div>
+    <div class="item item3">3</div>
+    <div class="item item4">4</div>
+    <div class="item item5">5</div>
+    <div class="item item6">6</div>
+    <div class="item item7">7</div>
+    <div class="item item8">8</div>
+    <div class="item item9">9</div>
+    <div class="item item10">10</div>
   </div>
 
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
